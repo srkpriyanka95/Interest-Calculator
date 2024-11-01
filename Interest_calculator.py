@@ -94,7 +94,7 @@ if button_clicked == 'Yes':
     f'''<p style='border: 2px solid black;
                 padding: 10px; border-radius: 20px; 
                 box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);max-width: 100%;
-                text-align: center; font-size:20px; color:blue;'><b>{diff_display}</b></p>''',
+                text-align: center; white-space: nowrap; text-overflow: ellipsis; color:blue;'><b>{diff_display}</b></p>''',
     unsafe_allow_html=True
     )
         if total_months > 12:
