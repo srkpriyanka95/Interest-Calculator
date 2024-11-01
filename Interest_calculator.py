@@ -19,6 +19,7 @@ st.markdown(
         text-align: center;         
         margin-left:50px;
         margin-right:50px;
+        max-width: 100%;
     }
     </style>
     """,
@@ -93,7 +94,7 @@ if button_clicked == 'Yes':
     f'''<p style='border: 2px solid black;
                 padding: 10px; border-radius: 20px; 
                 margin-left:100px; margin-right:100px; 
-                box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);
+                box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);max-width: 100%;
                 text-align: center; font-size:20px; color:blue;'><b>{diff_display}</b></p>''',
     unsafe_allow_html=True
     )
