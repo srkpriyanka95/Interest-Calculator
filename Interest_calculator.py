@@ -93,7 +93,6 @@ if button_clicked == 'Yes':
         st.markdown(
     f'''<p style='border: 2px solid black;
                 padding: 10px; border-radius: 20px; 
-                margin-left:100px; margin-right:100px; 
                 box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);max-width: 100%;
                 text-align: center; font-size:20px; color:blue;'><b>{diff_display}</b></p>''',
     unsafe_allow_html=True
@@ -126,10 +125,10 @@ if button_clicked == 'Yes':
         else:
             st.markdown(f'''
             <div style="display: flex; margin: 20px;">
-            <div style="width: 200px; padding: 20px;margin-left:50px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px;text-align: center;border-radius: 15px;display: flex; align-items: center; justify-content: center;">
+            <div style="width: 200px; padding: 20px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px;text-align: center;border-radius: 15px;display: flex; align-items: center; justify-content: center;">
                 <h4 style="margin: 20;">Net வட்டி</h4>
             </div>
-            <div style="flex-grow: 1; padding: 20px; margin-right:40px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);border-radius: 15px;box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
+            <div style="flex-grow: 1; padding: 20px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);border-radius: 15px;box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
             <p style='text-align: left; font-size:20px; color:black;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 25px;"><b>{round(net_interest_final)}</b></span> 
             <br>
             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;மொத்தம்&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 25px;"><b>{final_amount_with_net_Interst}</b></span></p>''',unsafe_allow_html=True)
