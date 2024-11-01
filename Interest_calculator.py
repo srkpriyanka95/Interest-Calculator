@@ -26,22 +26,32 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
 # Add the title inside the styled box
 st.markdown('<div class="title-box"style="font-size:20px; "><b>Interest Calculator</b></div>', unsafe_allow_html=True)
 
 st.write("")
 st.write("")
 # Input fields
+today_date = (datetime.now().date()).strftime("%d-%m-%Y")
+st.markdown(f"<p style='text-align: center; font-size: 15px; color: blue; '><b>இன்றைய தேதி : {today_date}</b></p>",unsafe_allow_html=True)
+time = st.date_input("**கடன் தேதி**",format="DD/MM/YYYY")
 principal = st.text_input("**கடன் தொகை**")
-time = st.date_input("**கடன் வாங்கியா தேதி**")
+
 
 # date_1 = datetime.strptime(time,"%Y/%m/%d").date()
 date_1 = time
 date_2 = datetime.today().date()
 
 date_diff = relativedelta(date_2, date_1)
+principal_num='No'
 if principal:
-    principal = int(principal)
+    try:
+        principal = int(principal)
+        principal_num='Yes'
+    except:
+        st.error("கடன் தொகையில் எண்ணை உள்ளிடவும்",icon="🚨")
+if principal_num == 'Yes':
 # print(date_diff.years,month_diff,date_diff.days)
     net_interest = principal*0.02
     initial_principal = principal
@@ -88,7 +98,7 @@ if button_clicked == 'Yes':
     
     if not principal:
         st.error("கடன் தொகையில் எண்ணை உள்ளிடவும்",icon="🚨")
-    else:
+    elif principal_num == 'Yes':
         st.write('')
         st.markdown(
     f'''<p style='border: 2px solid black;
