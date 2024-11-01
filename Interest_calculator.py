@@ -35,7 +35,7 @@ st.write("")
 # Input fields
 today_date = (datetime.now().date()).strftime("%d-%m-%Y")
 st.markdown(f"<p style='text-align: center; font-size: 15px; color: blue; '><b>இன்றைய தேதி : {today_date}</b></p>",unsafe_allow_html=True)
-time = st.date_input("**கடன் தேதி**",format="DD/MM/YYYY")
+time = st.date_input("**கடன் தேதி**",format="DD/MM/YYYY",max_value=datetime.today().date())
 principal = st.text_input("**கடன் தொகை**")
 
 
@@ -43,6 +43,11 @@ principal = st.text_input("**கடன் தொகை**")
 date_1 = time
 date_2 = datetime.today().date()
 
+if date_1 > date_2:
+    st.error("கடன் தேதியை சரிபார்க்கவும்",icon="🚨")
+    date_entered = 'No'
+else:
+    date_entered = 'Yes'
 date_diff = relativedelta(date_2, date_1)
 principal_num='No'
 if principal:
@@ -51,7 +56,7 @@ if principal:
         principal_num='Yes'
     except:
         st.error("கடன் தொகையில் எண்ணை உள்ளிடவும்",icon="🚨")
-if principal_num == 'Yes':
+if principal_num == 'Yes' and date_entered == 'Yes':
 # print(date_diff.years,month_diff,date_diff.days)
     net_interest = principal*0.02
     initial_principal = principal
@@ -99,7 +104,7 @@ if button_clicked == 'Yes':
     
     if not principal:
         st.error("கடன் தொகையில் எண்ணை உள்ளிடவும்",icon="🚨")
-    elif principal_num == 'Yes':
+    elif principal_num == 'Yes' and date_entered == 'Yes':
         st.write('')
         st.markdown(
     f'''<p style='border: 2px solid black;
