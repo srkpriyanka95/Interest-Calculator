@@ -92,46 +92,61 @@ if button_clicked == 'Yes':
         st.write('')
         st.markdown(
     f'''<p style='border: 2px solid black;
-                padding: 10px; border-radius: 20px; 
-                box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);max-width: 100%;
-                text-align: center; white-space: nowrap; text-overflow: ellipsis; color:blue;'><b>{diff_display}</b></p>''',
+                border-radius: 20px; 
+                padding:10px;
+                margin-left:10px; margin-right:10px; 
+                box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);
+                text-align: center; font-size:10px; color:blue;'><b>{diff_display}</b></p>''',
     unsafe_allow_html=True
     )
         if total_months > 12:
             
             st.write("")
             st.markdown(f'''
-            <div style="display: flex; margin: 20px;">
-            <div style="width: 200px; padding: 20px;margin-left:50px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px;text-align: center;border-radius: 15px;display: flex; align-items: center; justify-content: center;">
-                <h4 style="margin: 20;">கூட்டு வட்டி</h4>
-            </div>
-            <div style="flex-grow: 1; padding: 20px; margin-right:40px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);border-radius: 15px;box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
-            <p style='text-align: left; font-size:20px; color:black;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;கூட்டு வட்டி&nbsp;&nbsp;:&nbsp;&nbsp; </b> <span style="color: red; font-size: 25px;"><b>{total_compount_interst}</b></span> 
-            <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;மொத்தம் &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; </b> <span style="color: green; font-size: 25px;"><b>{final_amount_with_compound_Interst}</b></span></p> ''',unsafe_allow_html=True)
-            st.markdown(f'''
-            <div style="display: flex; margin: 20px;">
-            <div style="width: 200px; padding: 20px;margin-left:50px; background-color: #F2C096; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px;text-align: center;border-radius: 15px;display: flex; align-items: center; justify-content: center;">
-                <h4 style="margin: 20;">Net வட்டி</h4>
-            </div>
-            <div style="flex-grow: 1; padding: 20px; margin-right:40px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);border-radius: 15px;box-shadow: inset 2px 2px 6px rgba(204, 155, 114, 0.8);">
-            <p style='text-align: left; font-size:20px; color:black;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 25px;"><b>{total_net_interest}</b></span> 
-            <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;மொத்தம்&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 25px;"><b>{final_amount_with_net_Interst}</b></span></p> ''',unsafe_allow_html=True)
+    <div style="display: flex; margin: 20px;">
+        <div style="width: 200px; padding: 20px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+            <p style="margin: 0; font-size: 15px;"><b>கூட்டு வட்டி</b></p>
+        </div>
+        <div style="flex-grow: 1; padding: 10px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 15px; box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
+            <p style='text-align: left; font-size: 10px; color: black; margin: 0;'>
+                <b>&nbsp;கூட்டு வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 10px;"><b>{total_compount_interst}</b></span>
+                <br>
+                <b>&nbsp;மொத்தம்&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 10px;"><b>{final_amount_with_compound_Interst}</b></span>
+            </p>
+        </div>
+    </div>
+    <div style="display: flex; margin: 20px;">
+        <div style="width: 200px; padding: 20px; background-color: #F2C096; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+            <p style="margin: 0; font-size: 15px;"><b>Net வட்டி</b></p>
+        </div>
+        <div style="flex-grow: 1; padding: 10px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 15px; box-shadow: inset 2px 2px 6px rgba(204, 155, 114, 0.8);">
+            <p style='text-align: left; font-size: 10px; color: black; margin: 0;'>
+                <b>&nbsp;Net வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 10px;"><b>{total_net_interest}</b></span>
+                <br>
+                <b>&nbsp;மொத்தம்&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 10px;"><b>{final_amount_with_net_Interst}</b></span>
+            </p>
+        </div>
+    </div>
+''', unsafe_allow_html=True)
             # st.write(f'கூட்டு வட்டி = {total_compount_interst}')
             # st.write(f'மொத்தம் = {final_amount_with_compound_Interst}')
             # st.write(f'Net வட்டி = {total_net_interest}')
             # st.write(f'மொத்தம்       =  {final_amount_with_net_Interst}')
         else:
             st.markdown(f'''
-            <div style="display: flex; margin: 20px;">
-            <div style="width: 200px; padding: 20px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px;text-align: center;border-radius: 15px;display: flex; align-items: center; justify-content: center;">
-                <h4 style="margin: 20;">Net வட்டி</h4>
-            </div>
-            <div style="flex-grow: 1; padding: 20px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);border-radius: 15px;box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
-            <p style='text-align: left; font-size:20px; color:black;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 25px;"><b>{round(net_interest_final)}</b></span> 
-            <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;மொத்தம்&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 25px;"><b>{final_amount_with_net_Interst}</b></span></p>''',unsafe_allow_html=True)
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 100px; padding: 10px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px;">
+                        <p style="font-size: 15px; margin: 0;"><b>Net வட்டி</b></p>
+                    </div>
+                    <div style="flex-grow: 1; padding: 10px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 15px; box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
+                        <p style='text-align: left; font-size: 10px; color: black; margin: 0;'>
+                            <b>&nbsp;Net வட்டி&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: red; font-size: 10px;"><b>{round(net_interest_final)}</b></span>
+                            <br>
+                            <b>&nbsp;மொத்தம்&nbsp;&nbsp;:&nbsp;&nbsp;</b> <span style="color: green; font-size: 10px;"><b>{final_amount_with_net_Interst}</b></span>
+                        </p>
+                    </div>
+                </div>
+            ''', unsafe_allow_html=True)
             # st.write(f'Net வட்டி = {round(net_interest_final)}')
             # st.write(f'மொத்தம்       =  {final_amount_with_net_Interst}')
         
