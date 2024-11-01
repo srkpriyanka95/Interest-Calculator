@@ -104,7 +104,7 @@ if button_clicked == 'Yes':
             st.write("")
             st.markdown(f'''
     <div style="display: flex; margin: 20px;">
-        <div style="width: 200px; padding: 20px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 100px; padding: 10px; background-color: #8FCCC4; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
             <p style="margin: 0; font-size: 15px;"><b>கூட்டு வட்டி</b></p>
         </div>
         <div style="flex-grow: 1; padding: 10px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 15px; box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);">
@@ -116,7 +116,7 @@ if button_clicked == 'Yes':
         </div>
     </div>
     <div style="display: flex; margin: 20px;">
-        <div style="width: 200px; padding: 20px; background-color: #F2C096; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 100px; padding: 10px; background-color: #F2C096; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); margin-right: 20px; text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
             <p style="margin: 0; font-size: 15px;"><b>Net வட்டி</b></p>
         </div>
         <div style="flex-grow: 1; padding: 10px; background-color: #ffffff; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 15px; box-shadow: inset 2px 2px 6px rgba(204, 155, 114, 0.8);">
