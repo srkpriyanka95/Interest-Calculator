@@ -62,6 +62,7 @@ if principal_num == 'Yes':
         diff_display = f"{year_diff}&nbsp;&nbsp;ஆண்டு&nbsp;&nbsp;&nbsp;{month_diff}&nbsp;&nbsp;மாதம்&nbsp;&nbsp;&nbsp;&nbsp;{date_diff.days}&nbsp;&nbsp;நாள்"
     else:
         diff_display = f"{month_diff}&nbsp;&nbsp;மாதம்&nbsp;&nbsp;&nbsp;&nbsp;{date_diff.days}&nbsp;&nbsp;நாள்"
+        
     
     if date_diff.days > 0:
             month_diff +=1 
@@ -107,6 +108,16 @@ if button_clicked == 'Yes':
                 margin-left:10px; margin-right:10px; 
                 box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);
                 text-align: center; font-size:10px; color:blue;'><b>{diff_display}</b></p>''',
+    unsafe_allow_html=True
+    )
+        st.write("")
+        st.markdown(
+    f'''<p style='border: 2px solid black;
+                border-radius: 20px; 
+                padding:10px;
+                margin-left:10px; margin-right:10px; 
+                box-shadow: inset 2px 2px 6px rgba(71, 181, 218, 0.8);
+                text-align: center; font-size:10px; color:blue;'><b>மொத்த மாதம் : {total_months}</b></p>''',
     unsafe_allow_html=True
     )
         if total_months > 12:
