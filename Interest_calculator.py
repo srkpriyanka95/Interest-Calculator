@@ -27,7 +27,7 @@ st.markdown(
 )
 
 # Add the title inside the styled box
-st.markdown('<div class="title-box"style="font-size:30px; "><b>Interest Calculator</b></div>', unsafe_allow_html=True)
+st.markdown('<div class="title-box"style="font-size:20px; "><b>Interest Calculator</b></div>', unsafe_allow_html=True)
 
 st.write("")
 st.write("")
